@@ -1,0 +1,69 @@
+.mainFormacion{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.ctYsup{
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   width: auto;
+}
+.cancha{
+   margin-top: 5rem;
+    width: 41vw;
+    height: 145vh;
+    background-image: url(https://w0.peakpx.com/wallpaper/53/312/HD-wallpaper-soccer-field-soccer-pitch.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+.gridCancha{
+   height: 100%;
+   display: grid;
+   grid-template-areas: "golero golero golero golero"
+                       "lateralDer centralDer centralIzq lateralIzq"
+                       "volanteDer medioDer medioIzq volanteIzq"
+                       "delanteroDer delanteroDer delanteroIzq delanteroIzq";
+}
+.posicion{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+  color: white;
+  text-align: center;
+}
+.golero{
+   grid-area: golero;
+}
+.lateralDer{
+   grid-area: lateralDer;
+}
+.lateralIzq{
+   grid-area: lateralIzq;
+}
+.centralDer{
+   grid-area: centralDer;
+}
+.centralIzq{
+   grid-area: centralIzq;
+}
+.volanteDer{
+   grid-area: volanteDer;
+}
+.volanteIzq{
+   grid-area: volanteIzq;
+}
+.medioDer{
+   grid-area: medioDer;
+}
+.medioIzq{
+   grid-area: medioIzq;
+}
+.delanteroDer{
+   grid-area: delanteroDer;
+}
+.delanteroIzq{
+   grid-area: delanteroIzq;
+}
