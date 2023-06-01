@@ -7,15 +7,31 @@ function Formacion(props) {
   return (
     <div className='mainFormacion'>
       <div className='ctYsup'>
-      <div className='suplentes'></div>
-      <div className='cuerpotecnico'></div>
+      <div className='suplentes'>
+    {props.suplentes.map((item)=>(
+      <>
+      <div>{item.nombre}</div>
+      <div>{item.posicion}</div>
+      </>
+    ))}
+      </div>
+
+      <div className='cuerpoTecnico'>
+        {props.cuerpoTecnico.map((item)=>(
+        <>
+        <div>{item.nombre}</div>
+        <div>{item.funcion}</div>
+        </>
+        ))}
+      
+      </div>
       </div>
       <div className='cancha'>
       <div className='gridCancha'>
 {props.lista.map((item)=>(
   <>
   <div className= {`${item.posicion} posicion`}> 
-  <div><IoMdShirt /></div>
+  <div><IoMdShirt size={50} color=''/></div>
   <div>{item.nombre}</div> 
   <div>{item.numero}</div> 
   

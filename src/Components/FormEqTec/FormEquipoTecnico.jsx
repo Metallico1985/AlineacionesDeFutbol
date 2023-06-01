@@ -1,18 +1,15 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-function FormEquipoTecnico() {
+function FormEquipoTecnico(props) {
 
   const [nombre, setNombre] = useState("");
   const [funcion, setFuncion] = useState("");
-  const [cuerpoTec, setCuerpoTec] = useState([])
 
   const handleFuncion = (e) => { setFuncion(e.target.value) }
   const handleNombre = (e) => { setNombre(e.target.value) }
-  const agregar = (t) => { setCuerpoTec([...cuerpoTec, t]) }
-  const handleSubmit = (e) => { e.preventDefault(), agregar(integrante) }
-
+  const handleSubmit = (e) => { e.preventDefault(), props.handleCuerpoTecnico(integrante)}
+ 
   const integrante = {
     nombre: nombre,
     funcion: funcion,
@@ -21,7 +18,7 @@ function FormEquipoTecnico() {
 
   return (
     <div className='formContainer'>
-      {cuerpoTec.length <7?
+      {props.lista.length <3?
        <div className='cuerpoTecContainer'>
        <h1>Ingresar cuerpo tecnico</h1>
        <form onSubmit={handleSubmit} className='formIngreso'>
@@ -31,12 +28,12 @@ function FormEquipoTecnico() {
            <option value="directorTecnico">Director Tecnico</option>
            <option value="ayudanteTecnico">Ayudante Tecnico</option>
            <option value="preparadorFisico">Preparador Fisico</option>
-           <option value="utilero">Utilero</option>
          </select>
          <button type='submit'>Agregar</button>
        </form>
-     </div>:<></>
-    }
+     </div>
+     :<></>
+      }
      
 
     </div>

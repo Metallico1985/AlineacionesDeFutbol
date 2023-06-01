@@ -1,18 +1,15 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-function FormSuplentes() {
+function FormSuplentes(props) {
     const [posicion, setPosicion] = useState("");
     const [nombre, setNombre] = useState("");
     const [numero, setNumero] = useState("");
-    const [suplentes, setSuplentes] = useState([])
 
     const handlePosicion = (e) => { setPosicion(e.target.value) }
     const handleNombre = (e) => { setNombre(e.target.value) }
     const handleNumero = (e) => { setNumero(e.target.value) }
-    const agregarSuplente = (s) => { setSuplentes([...suplentes, s]) }
-    const handleSubmit = (e) => { e.preventDefault(), agregarSuplente(suplente) }
+    const handleSubmit = (e) => { e.preventDefault(), props.handleSuplentes(suplente) }
 
     const suplente = {
         nombre: nombre,
@@ -22,7 +19,7 @@ function FormSuplentes() {
 
     return (
         <div className='formContainer'>
-{suplentes.length < 7? 
+{props.lista.length < 7? 
     <div className='formSupContainer'>
             <h1>Ingresar Suplentes</h1>
             <form onSubmit={handleSubmit} className='formIngreso'>

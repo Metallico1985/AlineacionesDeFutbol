@@ -17,6 +17,12 @@ function FormTitulares() {
   const handleNumero = (e) => { setNumero(e.target.value) }
   const agregarTitular = (t) => { setTitulares([...titulares, t]) }
   const handleSubmit = (e) => { e.preventDefault(), agregarTitular(titular) ,console.log(titulares)}
+ 
+  const [ct, setCt] = useState([])
+  const handleCuerpoTecnico = (i) => {setCt([...ct, i]), console.log(ct)}
+
+const [suplentes, setSuplentes] = useState([])
+const handleSuplentes = (s) => {setSuplentes([...suplentes, s])}
 
   const titular = {
     nombre: nombre,
@@ -49,9 +55,9 @@ function FormTitulares() {
         <button type='submit'>Agregar</button>
       </form>
 </div>:<></> }
-      <FormSuplentes/>
-      <FormEquipoTecnico/>
-      <Formacion lista={titulares}/>
+      <FormSuplentes handleSuplentes = {handleSuplentes} lista={suplentes}/>
+      <FormEquipoTecnico handleCuerpoTecnico={handleCuerpoTecnico} lista ={ct} />
+      <Formacion cuerpoTecnico = {ct}  lista={titulares} suplentes={suplentes}/>
     </div>
   )
 }

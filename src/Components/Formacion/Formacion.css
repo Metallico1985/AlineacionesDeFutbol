@@ -3,6 +3,17 @@
    justify-content: center;
    align-items: center;
 }
+.suplentes{
+   text-align: center;
+   height: 50vh;
+   width: 10vw;
+   
+}
+.cuerpoTecnico{
+   text-align: center;
+   height: 50vh;
+   width: 10vw;
+}
 .ctYsup{
    display: flex;
    flex-direction: column;
