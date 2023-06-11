@@ -1,80 +1,138 @@
-.mainFormacion{
+* {
+   padding: 0;
+   margin: 0;
+   scroll-behavior: smooth;
+}
+
+.mainFormacion {
    display: flex;
    justify-content: center;
    align-items: center;
 }
-.suplentes{
+
+.suplentes {
    text-align: center;
    height: 50vh;
    width: 10vw;
-   
+   padding: 4rem;
+   margin: 0 auto;
+   background-color: rgb(97, 97, 97);
+   border-radius: 2rem;
 }
-.cuerpoTecnico{
+
+.txtSuplentes {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cuerpoTecnico {
    text-align: center;
    height: 50vh;
    width: 10vw;
+   padding: 4rem;
+   margin: 0 auto;
+   background-color: rgb(97, 97, 97);
+   border-radius: 2rem;
 }
-.ctYsup{
+
+.ctYsup {
    display: flex;
    flex-direction: column;
    height: 100vh;
    width: auto;
+   margin-left: 5rem;
 }
-.cancha{
+
+.ctFuncion {
+   font-weight: bold;
+}
+
+.supNumero {
+   font-weight: bold;
+   background-color: blueviolet;
+   width: 2rem;
+   margin-right: 0.3rem;
+}
+
+.txtColor {
+   color: white;
+}
+
+h2 {
+   color: white;
+   text-align: center;
+   margin: 3rem;
+}
+
+.cancha {
    margin-top: 5rem;
-    width: 41vw;
-    height: 145vh;
-    background-image: url(https://w0.peakpx.com/wallpaper/53/312/HD-wallpaper-soccer-field-soccer-pitch.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 15px;
+   width: 41vw;
+   height: 145vh;
+   background-image: url(https://w0.peakpx.com/wallpaper/53/312/HD-wallpaper-soccer-field-soccer-pitch.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 15px;
 }
-.gridCancha{
+
+.gridCancha {
    height: 100%;
    display: grid;
    grid-template-areas: "golero golero golero golero"
-                       "lateralDer centralDer centralIzq lateralIzq"
-                       "volanteDer medioDer medioIzq volanteIzq"
-                       "delanteroDer delanteroDer delanteroIzq delanteroIzq";
+      "lateralDer centralDer centralIzq lateralIzq"
+      "volanteDer medioDer medioIzq volanteIzq"
+      "delanteroDer delanteroDer delanteroIzq delanteroIzq";
 }
-.posicion{
+
+.posicion {
    display: flex;
    justify-content: center;
    flex-direction: column;
-  color: white;
-  text-align: center;
+   color: white;
+   text-align: center;
 }
-.golero{
+
+.golero {
    grid-area: golero;
 }
-.lateralDer{
+
+.lateralDer {
    grid-area: lateralDer;
 }
-.lateralIzq{
+
+.lateralIzq {
    grid-area: lateralIzq;
 }
-.centralDer{
+
+.centralDer {
    grid-area: centralDer;
 }
-.centralIzq{
+
+.centralIzq {
    grid-area: centralIzq;
 }
-.volanteDer{
+
+.volanteDer {
    grid-area: volanteDer;
 }
-.volanteIzq{
+
+.volanteIzq {
    grid-area: volanteIzq;
 }
-.medioDer{
+
+.medioDer {
    grid-area: medioDer;
 }
-.medioIzq{
+
+.medioIzq {
    grid-area: medioIzq;
 }
-.delanteroDer{
+
+.delanteroDer {
    grid-area: delanteroDer;
 }
-.delanteroIzq{
+
+.delanteroIzq {
    grid-area: delanteroIzq;
 }
